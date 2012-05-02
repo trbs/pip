@@ -1,6 +1,6 @@
 from mock import patch
 from pip.vcs.git import Git
-from tests.test_pip import (reset_env, run_pip,
+from test_pip import (reset_env, run_pip,
                             _create_test_package)
 
 

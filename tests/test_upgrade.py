@@ -1,9 +1,9 @@
 import textwrap
 from os.path import join
-from tests.test_pip import (here, reset_env, run_pip, assert_all_changes,
+from test_pip import (here, reset_env, run_pip, assert_all_changes,
                             write_file, pyversion, _create_test_package,
                             _change_test_package_version)
-from tests.local_repos import local_checkout
+from local_repos import local_checkout
 
 
 def test_no_upgrade_unless_requested():

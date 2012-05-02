@@ -1,4 +1,4 @@
-from tests.test_pip import pyversion
+from test_pip import pyversion
 from pip.vcs.bazaar import Bazaar
 
 if pyversion >= '3':

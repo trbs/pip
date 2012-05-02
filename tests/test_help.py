@@ -4,7 +4,7 @@ from pip.commands.help import (HelpCommand,
                                ERROR,)
 from mock import Mock
 from nose.tools import assert_raises
-from tests.test_pip import run_pip, reset_env
+from test_pip import run_pip, reset_env
 
 
 def test_run_method_should_return_sucess_when_finds_command_name():

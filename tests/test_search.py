@@ -6,8 +6,8 @@ from pip.commands.search import (compare_versions,
 from pip.status_codes import NO_MATCHES_FOUND, SUCCESS
 from pip.backwardcompat import xmlrpclib, b
 from mock import Mock
-from tests.test_pip import run_pip, reset_env, pyversion
-from tests.pypi_server import assert_equal
+from test_pip import run_pip, reset_env, pyversion
+from pypi_server import assert_equal
 
 
 if pyversion >= '3':

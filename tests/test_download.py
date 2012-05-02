@@ -1,8 +1,8 @@
 from pip.backwardcompat import any
 
 import textwrap
-from tests.test_pip import reset_env, run_pip, write_file
-from tests.path import Path
+from test_pip import reset_env, run_pip, write_file
+from path import Path
 
 
 def test_download_if_requested():

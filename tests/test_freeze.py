@@ -2,8 +2,8 @@ import sys
 import re
 import textwrap
 from doctest import OutputChecker, ELLIPSIS
-from tests.test_pip import reset_env, run_pip, write_file, get_env, pyversion
-from tests.local_repos import local_checkout, local_repo
+from test_pip import reset_env, run_pip, write_file, get_env, pyversion
+from local_repos import local_checkout, local_repo
 
 
 distribute_re = re.compile('^distribute==[0-9.]+\n', re.MULTILINE)

@@ -1,6 +1,6 @@
 from pip.backwardcompat import urllib
-from tests.test_pip import here, reset_env, run_pip, pyversion
-from tests.path import Path
+from test_pip import here, reset_env, run_pip, pyversion
+from path import Path
 
 index_url = 'file://' + urllib.quote(str(Path(here).abspath/'in dex').replace('\\', '/'))
 

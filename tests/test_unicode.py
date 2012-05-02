@@ -1,5 +1,5 @@
 import os
-from tests.test_pip import here, reset_env, run_pip
+from test_pip import here, reset_env, run_pip
 
 
 def test_install_package_that_emits_unicode():

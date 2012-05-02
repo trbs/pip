@@ -13,7 +13,7 @@ import os
 import pip
 import getpass
 from pip.basecommand import get_proxy
-from tests.test_pip import here
+from test_pip import here
 
 
 def new_getpass(prompt, answer='passwd'):

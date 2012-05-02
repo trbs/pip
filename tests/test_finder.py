@@ -3,8 +3,8 @@ from pip.backwardcompat import urllib
 from pip.req import InstallRequirement
 from pip.index import PackageFinder
 
-from tests.path import Path
-from tests.test_pip import here
+from path import Path
+from test_pip import here
 
 find_links = 'file://' + urllib.quote(str(Path(here).abspath/'packages').replace('\\', '/'))
 

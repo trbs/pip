@@ -3,7 +3,7 @@ Tests for compatibility workarounds.
 
 """
 import os
-from tests.test_pip import (here, reset_env, run_pip, pyversion,
+from test_pip import (here, reset_env, run_pip, pyversion,
                             assert_all_changes)
 
 

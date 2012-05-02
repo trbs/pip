@@ -1,9 +1,9 @@
 import os
 import textwrap
 from os.path import abspath, exists, join
-from tests.test_pip import (here, reset_env, run_pip, write_file, mkdir)
-from tests.local_repos import local_checkout
-from tests.path import Path
+from test_pip import (here, reset_env, run_pip, write_file, mkdir)
+from local_repos import local_checkout
+from path import Path
 
 
 def test_cleanup_after_install_from_pypi():

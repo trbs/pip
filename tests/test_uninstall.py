@@ -2,8 +2,8 @@ import textwrap
 import sys
 from os.path import join
 from tempfile import mkdtemp
-from tests.test_pip import reset_env, run_pip, assert_all_changes, write_file
-from tests.local_repos import local_repo, local_checkout
+from test_pip import reset_env, run_pip, assert_all_changes, write_file
+from local_repos import local_repo, local_checkout
 
 from pip.util import rmtree
 

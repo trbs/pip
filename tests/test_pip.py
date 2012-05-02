@@ -9,7 +9,7 @@ import textwrap
 import site
 
 from scripttest import TestFileEnvironment, FoundDir
-from tests.path import Path, curdir, u
+from path import Path, curdir, u
 from pip.util import rmtree
 
 pyversion = sys.version[:3]
