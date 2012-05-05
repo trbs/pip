@@ -26,7 +26,7 @@ class ShowCommand(Command):
         if dist.requires():
             f.write('Requires:\n')
             for dep in dist.requires():
-              f.write(dep.project_name + '\n')
+                f.write(dep.project_name + '\n')
 
 
 ShowCommand()
