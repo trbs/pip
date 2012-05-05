@@ -19,7 +19,7 @@ except ImportError:
 class ShowCommand(Command):
     name = 'show'
     usage = '%proc PACKAGE_NAME'
-    summary = 'Show information about some package'
+    summary = 'Show detailed information about an installed package'
 
     def __init__(self):
         super(ShowCommand, self).__init__()
