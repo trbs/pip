@@ -7,7 +7,7 @@ from tests.local_repos import local_checkout, local_repo
 
 
 distribute_re = re.compile('^distribute==[0-9.]+\n', re.MULTILINE)
-
+latest_version_re = re.compile('^Latest Version: [0-9.]+\n', re.MULTILINE)
 
 def _check_output(result, expected):
     checker = OutputChecker()
@@ -26,7 +26,10 @@ def _check_output(result, expected):
 
     # This allows our existing tests to work when run in a context
     # with distribute installed.
-    actual = distribute_re.sub('', actual)
+    actual = distribute_re.sub('######', actual)
+    
+    # Replace the latest version so that the test won't break.
+    actual = latest_version_re.sub('', actual)
 
     def banner(msg):
         return '\n========== %s ==========\n' % msg
@@ -42,8 +45,28 @@ def test_show():
     expected = textwrap.dedent("""\
         Script result: pip show INITools
         -- stdout: --------------------
-        Package: INITools
-        Version: 0.2
+        Package:        INITools
+        Summary:        Tools for parsing and using INI-style files
+        Version:        0.2
+        Author:         Ian Bicking
+        Homepage:       http://pythonpaste.org/initools/
+        License:        MIT
+        """)
+    _check_output(result, expected)
+
+    
+def test_show_with_pypi_package():
+    env = reset_env()
+    result = run_pip('show', 'pypi', expect_stderr=True)
+    expected = textwrap.dedent("""\
+        Script result: pip show pypi
+        -- stdout: --------------------
+        Package:        pypi
+        Summary:        PyPI is the Python Package Index at http://pypi.python.org/
+        Latest Version: 2005-08-01
+        Author:         Richard Jones
+        Homepage:       http://wiki.python.org/moin/CheeseShopDev
+        License:        UNKNOWN
         """)
     _check_output(result, expected)
 
